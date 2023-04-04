@@ -5,17 +5,18 @@ router.post('/',async(req,res)=>{
     try {
         const {name,email,password,picture}=req.body;
         console.log(req.body);
-        const user1 =await User.create({name,email,password,picture});
-        res.status(201).json(user1);
+        const user =await User.create({name,email,password,picture});
+        res.status(201).json(user);
     } catch (e) {
         let msg;
         if(e.code==11000){
-            msg="user already exist";
+            msg="User already exist";
         }
         else{
             msg=e.message;
-            console.log(e);
+          
         }
+        console.log(e);
         res.status(400).json(msg);
     }
 })
@@ -24,10 +25,10 @@ router.post('/',async(req,res)=>{
 router.post("/login",async(req,res)=>{
 try {
     const {email,password}=req.body;
-    const user1=await user.findByCredentials(email,password);
-    user1.status="online";
-    await user1.save();
-    res.status(200).json(user1);
+    const user=await User.findByCredentials(email,password);
+    user.status="online";
+    await user.save();
+    res.status(200).json(user);
 } catch (e) {
     res.status(400).json(e.message);
 }

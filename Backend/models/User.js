@@ -58,7 +58,7 @@ UserSchema.methods.toJSON=function(){
 }
 
 UserSchema.statics.findByCredentials=async function(email,password){
-    let user=await user.findOne({email});
+    let user=await User.findOne({email});
     if(!user) throw new Error("Invalid email or password");
 
     const ismatch=await bcrypt.compare(password,user.password);
@@ -66,6 +66,6 @@ UserSchema.statics.findByCredentials=async function(email,password){
     return user;
 }
 
-const User= new mongoose.model("user",UserSchema);
+const User= new mongoose.model("User",UserSchema);
 module.exports=User;
 

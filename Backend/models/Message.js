@@ -3,6 +3,7 @@ const MessageSchema=new mongoose.Schema({
     content:String,
     from:Object,
     sockeid:String,
+    time:String,
     date:String,
     to:String
 })
