@@ -1,0 +1,9 @@
+.login_bg
+{
+    background-image: url(https://img.freepik.com/premium-vector/phone-with-messaging-application-online-news-work-chat-with-smartphone-background_640527-102.jpg);
+    height: 92vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}

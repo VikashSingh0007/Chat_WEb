@@ -1,0 +1,14 @@
+.home_bg
+{
+    height: 92vh;
+    background-image: url(https://thumbs.dreamstime.com/z/hands-holding-smartphone-chat-app-chatting-online-smart-phone-flat-vector-illustration-white-background-work-home-176928286.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+.home-message-icon
+{
+    margin-left: 10px;
+    display:inline-block;
+}
