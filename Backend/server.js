@@ -3,7 +3,7 @@ const app=express();
 const User = require("./models/User"); 
 const Message=require("./models/Message");
 const userRoutes=require("./routes/userRoutes");
-const rooms=['general','tech','finance','crypto'];
+const rooms=['general','Coading Club','Robotics Club','Energy Club'];
 const cors=require("cors");
 //const { Socket } = require("socket.io");
 app.use(express.urlencoded({extende:true}));
