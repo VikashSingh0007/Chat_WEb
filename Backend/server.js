@@ -92,3 +92,6 @@ app.get("/rooms",(req,res)=>{
 server.listen(PORT,()=>{
     console.log(`port is listening on ${PORT}`);
 })
+
+
+module.exports = app;
